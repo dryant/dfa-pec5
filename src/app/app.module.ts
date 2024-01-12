@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CitylistComponent } from './components/citylist/citylist.component';
-import { CitytableComponent } from './components/citytable/citytable.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { MenuComponent } from './components/menu/menu.component';
     MatMenuModule,
     MatIconModule,
     CitylistComponent,
-    CitytableComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
