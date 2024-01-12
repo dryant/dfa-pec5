@@ -11,7 +11,7 @@ import { CitylistComponent } from './components/citylist/citylist.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [AppComponent, MenuComponent, CardDetailsComponent],
   imports: [
@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     CitylistComponent,
     HttpClientModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
