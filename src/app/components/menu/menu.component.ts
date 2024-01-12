@@ -12,4 +12,7 @@ export class MenuComponent {
   navigateTo(route: string): void {
     this.router.navigate([route]);
   }
+  goBack(): void {
+    this.router.navigate(['/']); // Puedes proporcionar la ruta a la que deseas volver
+  }
 }
