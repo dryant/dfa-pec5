@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CitylistComponent } from './components/citylist/citylist.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { CardDetailsComponent } from './components/card-details/card-details.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent],
+  declarations: [AppComponent, MenuComponent, CardDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

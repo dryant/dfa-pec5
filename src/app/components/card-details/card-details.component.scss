@@ -1,0 +1,28 @@
+/* country-info.component.scss */
+
+.country-card {
+  width: 400px; /* O ajusta según tus preferencias */
+  margin: 16px;
+}
+
+.country-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.flag {
+  width: 50px; /* O ajusta según tus preferencias */
+  margin-left: 8px;
+}
+
+.coat-of-arms {
+  width: 100%; /* Ancho completo */
+  height: auto; /* Altura automática */
+  margin-bottom: 16px;
+}
+
+.field {
+  margin-bottom: 8px;
+}
