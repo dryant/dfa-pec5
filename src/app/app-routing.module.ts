@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'citytable', component: CitytableComponent },
   { path: 'citylist', component: CitylistComponent },
   { path: 'card-details', component: CardDetailsComponent },
+  { path: 'country/:country', component: CardDetailsComponent },
 ];
 
 @NgModule({

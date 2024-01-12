@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { CitylistComponent } from './components/citylist/citylist.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, MenuComponent, CardDetailsComponent],
@@ -21,6 +22,7 @@ import { CardDetailsComponent } from './components/card-details/card-details.com
     MatMenuModule,
     MatIconModule,
     CitylistComponent,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
