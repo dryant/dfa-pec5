@@ -4,7 +4,7 @@
       <div class="card-row">
         <div class="id-field">{{ country.flag }}</div>
         <div class="name-field">{{ country.name?.common }}</div>
-        <button (click)="navigateTo('card-details')">+ Info</button>
+        <button (click)="goCountry(country.name.common)">+ Info</button>
       </div>
     </mat-card-content>
   </mat-card>

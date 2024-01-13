@@ -26,7 +26,7 @@ export class CitylistComponent implements OnInit {
     });
   }
 
-  navigateTo(route: string): void {
-    this.router.navigate([route]);
+  goCountry(countryName: string): void {
+    this.router.navigate(['/country', countryName]);
   }
 }
