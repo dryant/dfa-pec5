@@ -3,40 +3,24 @@
 <mat-card class="country-card mat-padding">
   <!-- Título y bandera -->
   <div class="country-header">
-    <img class="flag" [src]="countryInfo.flag" alt="Bandera" />
-    <h1>{{ countryInfo.name }}</h1>
+    <img class="flag" alt="Bandera" />
+    <h1>Spain</h1>
   </div>
 
   <!-- Separador horizontal -->
   <hr />
 
   <!-- Escudo de armas -->
-  <img
-    class="coat-of-arms"
-    [src]="countryInfo.coatOfArms"
-    alt="Escudo de armas"
-  />
+  <img class="coat-of-arms" alt="Escudo de armas" />
 
   <!-- Separador horizontal -->
   <hr />
 
   <!-- Otros campos -->
-  <div class="field">
-    <strong>Nombre en inglés:</strong> {{ countryInfo.name }}
-  </div>
-  <div class="field">
-    <strong>Continente:</strong> {{ countryInfo.continent }}
-  </div>
-  <div class="field"><strong>Capital:</strong> {{ countryInfo.capital }}</div>
-  <div class="field">
-    <strong>Moneda:</strong> {{ countryInfo.currency }} ({{
-      countryInfo.symbolCurrency
-    }})
-  </div>
-  <div class="field">
-    <strong>Lengua oficial:</strong> {{ countryInfo.language }}
-  </div>
-  <div class="field">
-    <strong>Población:</strong> {{ countryInfo.population }}
-  </div>
+  <div class="field"><strong>Nombre en inglés:</strong> spain</div>
+  <div class="field"><strong>Continente:</strong> europa</div>
+  <div class="field"><strong>Capital:</strong> madiri</div>
+  <div class="field"><strong>Moneda:</strong>Euro</div>
+  <div class="field"><strong>Lengua oficial:</strong> castellano</div>
+  <div class="field"><strong>Población:</strong> 47000000</div>
 </mat-card>
