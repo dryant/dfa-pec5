@@ -12,6 +12,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { CardDetailsComponent } from './components/card-details/card-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [AppComponent, MenuComponent, CardDetailsComponent],
   imports: [
@@ -24,6 +25,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CitylistComponent,
     HttpClientModule,
     MatProgressSpinnerModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

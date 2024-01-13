@@ -1,5 +1,5 @@
 export interface CountryInfo {
-  name: string;
+  name: { common: string };
   coatOfArms: string;
   continent: string;
   flag: string;

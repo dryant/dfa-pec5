@@ -1,27 +1,11 @@
-<mat-card class="">
-  <mat-card-content>
-    <div class="card-row">
-      <div class="id-field">1</div>
-      <div class="name-field">Nombre de ejemplo</div>
-      <button (click)="navigateTo('card-details')">+ Info</button>
-    </div>
-  </mat-card-content>
-</mat-card>
-<mat-card class="">
-  <mat-card-content>
-    <div class="card-row">
-      <div class="id-field">1</div>
-      <div class="name-field">Nombre de ejemplo</div>
-      <button (click)="navigateTo('card-details')">+ Info</button>
-    </div>
-  </mat-card-content>
-</mat-card>
-<mat-card class="">
-  <mat-card-content>
-    <div class="card-row">
-      <div class="id-field">1</div>
-      <div class="name-field">Nombre de ejemplo</div>
-      <button (click)="navigateTo('card-details')">+ Info</button>
-    </div>
-  </mat-card-content>
-</mat-card>
+<div *ngFor="let country of countries">
+  <mat-card class="mat-margin">
+    <mat-card-content>
+      <div class="card-row">
+        <div class="id-field">{{ country.flag }}</div>
+        <div class="name-field">{{ country.name?.common }}</div>
+        <button (click)="navigateTo('card-details')">+ Info</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
