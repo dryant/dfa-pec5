@@ -35,13 +35,14 @@
     <strong>Capital: </strong>{{ countryInfo[0].capital }}
   </div>
   <div class="field" *ngFor="let currency of getCurrencies(countryInfo[0])">
-    <p>
-      <strong>Moneda: </strong>{{ currency.code }} ({{ currency.name }}) -
-      {{ currency.symbol }}
-    </p>
+    <p><strong>Moneda: </strong>{{ currency.code }} ({{ currency.name }})</p>
+    <p><strong>Símbolo de la Moneda: </strong>{{ currency.symbol }}</p>
   </div>
   <div class="field">
     <strong>Lengua oficial: </strong>
+    <div *ngFor="let key of getLanguages(countryInfo[0]); let i = index">
+      {{ key }}
+    </div>
   </div>
   <div class="field">
     <strong>Población: </strong>{{ countryInfo[0].population }}

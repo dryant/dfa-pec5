@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CountriesService } from 'src/app/services/countries.service';
 import { CountryInfo } from 'src/app/models/country2.interface';
 import { CurrencyInfo } from 'src/app/models/currency.interface';
+import { CountriesService } from 'src/app/services/countries.service';
 
 @Component({
   selector: 'app-card-details',
@@ -12,6 +12,7 @@ import { CurrencyInfo } from 'src/app/models/currency.interface';
 export class CardDetailsComponent implements OnInit {
   countryInfo: CountryInfo[] = [];
   countryName: string | undefined;
+  languages: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -45,5 +46,16 @@ export class CardDetailsComponent implements OnInit {
       }
     }
     return currencies;
+  }
+
+  getLanguages(country: CountryInfo): string[] {
+    const languages: string[] = [];
+    for (const languageCode in country.languages) {
+      if (country.languages.hasOwnProperty(languageCode)) {
+        const language = country.languages[languageCode];
+        languages.push(language);
+      }
+    }
+    return languages;
   }
 }
