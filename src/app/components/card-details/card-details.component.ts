@@ -8,19 +8,25 @@ import { CountriesService } from 'src/app/services/countries.service';
 // Remove the following import statement
 // import { CardDetailsComponent } from './components/card-details/card-details.component';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatExpansionModule } from '@angular/material/expansion';
 @Component({
   selector: 'app-card-details',
   templateUrl: './card-details.component.html',
   styleUrls: ['./card-details.component.scss'],
   standalone: true,
-  imports: [CommonModule, MatProgressSpinnerModule, MatCardModule],
+  imports: [
+    CommonModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatExpansionModule,
+  ],
 })
 export class CardDetailsComponent implements OnInit {
   countryInfo: CountryInfo[] = [];
   countryName: string | undefined;
   languages: string[] = [];
   loading = false;
+  panelOpenState = false;
 
   constructor(
     private route: ActivatedRoute,

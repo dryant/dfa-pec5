@@ -29,6 +29,14 @@
     <hr />
 
     <!-- Otros campos -->
+  </mat-card>
+</ng-template>
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Mas info </mat-panel-title>
+      <mat-panel-description> Pulsar para mas datos </mat-panel-description>
+    </mat-expansion-panel-header>
     <div class="field">
       <strong>Nombre en inglés: </strong>{{ countryInfo[0].name.common }}
     </div>
@@ -51,5 +59,5 @@
     <div class="field">
       <strong>Población: </strong>{{ countryInfo[0].population }}
     </div>
-  </mat-card>
-</ng-template>
+  </mat-expansion-panel>
+</mat-accordion>
