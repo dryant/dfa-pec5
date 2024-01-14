@@ -30,34 +30,37 @@
 
     <!-- Otros campos -->
   </mat-card>
-</ng-template>
-<mat-accordion>
-  <mat-expansion-panel hideToggle>
-    <mat-expansion-panel-header>
-      <mat-panel-title> Mas info </mat-panel-title>
-      <mat-panel-description> Pulsar para mas datos </mat-panel-description>
-    </mat-expansion-panel-header>
-    <div class="field">
-      <strong>Nombre en inglés: </strong>{{ countryInfo[0].name.common }}
-    </div>
-    <div class="field">
-      <strong>Continente: </strong>{{ countryInfo[0].continents[0] }}
-    </div>
-    <div class="field">
-      <strong>Capital: </strong>{{ countryInfo[0].capital }}
-    </div>
-    <div class="field" *ngFor="let currency of getCurrencies(countryInfo[0])">
-      <p><strong>Moneda: </strong>{{ currency.code }} ({{ currency.name }})</p>
-      <p><strong>Símbolo de la Moneda: </strong>{{ currency.symbol }}</p>
-    </div>
-    <div class="field">
-      <strong>Lengua oficial: </strong>
-      <div *ngFor="let key of getLanguages(countryInfo[0]); let i = index">
-        {{ key }}
+
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Mas info </mat-panel-title>
+        <mat-panel-description> Pulsar para mas datos </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="field">
+        <strong>Nombre en inglés: </strong>{{ countryInfo[0].name.common }}
       </div>
-    </div>
-    <div class="field">
-      <strong>Población: </strong>{{ countryInfo[0].population }}
-    </div>
-  </mat-expansion-panel>
-</mat-accordion>
+      <div class="field">
+        <strong>Continente: </strong>{{ countryInfo[0].continents[0] }}
+      </div>
+      <div class="field">
+        <strong>Capital: </strong>{{ countryInfo[0].capital }}
+      </div>
+      <div class="field" *ngFor="let currency of getCurrencies(countryInfo[0])">
+        <p>
+          <strong>Moneda: </strong>{{ currency.code }} ({{ currency.name }})
+        </p>
+        <p><strong>Símbolo de la Moneda: </strong>{{ currency.symbol }}</p>
+      </div>
+      <div class="field">
+        <strong>Lengua oficial: </strong>
+        <div *ngFor="let key of getLanguages(countryInfo[0]); let i = index">
+          {{ key }}
+        </div>
+      </div>
+      <div class="field">
+        <strong>Población: </strong>{{ countryInfo[0].population }}
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</ng-template>
