@@ -1,31 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { CountryInfo } from 'src/app/models/country.interface';
 import { CountriesService } from 'src/app/services/countries.service';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-/**
- * @title Basic use of `<table mat-table>`
- */
 @Component({
   selector: 'app-citytable',
   templateUrl: './citytable.component.html',
   styleUrls: ['./citytable.component.scss'],
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule, CommonModule, MatProgressSpinnerModule],
 })
 export class CitytableComponent implements OnInit {
   [x: string]: any;
   countries: CountryInfo[] = [];
+  loading = false;
 
   constructor(
-    private countriesService: CountriesService,
-    private router: Router
+    private router: Router,
+    private countriesService: CountriesService
   ) {}
 
   ngOnInit(): void {
+    this.loading = true;
     this.countriesService.getCountries().subscribe((countries) => {
       this.countries = countries as CountryInfo[];
+      this.loading = false;
     });
   }
 

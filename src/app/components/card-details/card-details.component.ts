@@ -1,18 +1,26 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ActivatedRoute } from '@angular/router';
 import { CountryInfo } from 'src/app/models/country2.interface';
 import { CurrencyInfo } from 'src/app/models/currency.interface';
 import { CountriesService } from 'src/app/services/countries.service';
+// Remove the following import statement
+// import { CardDetailsComponent } from './components/card-details/card-details.component';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-card-details',
   templateUrl: './card-details.component.html',
   styleUrls: ['./card-details.component.scss'],
+  standalone: true,
+  imports: [CommonModule, MatProgressSpinnerModule, MatCardModule],
 })
 export class CardDetailsComponent implements OnInit {
   countryInfo: CountryInfo[] = [];
   countryName: string | undefined;
   languages: string[] = [];
+  loading = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +29,7 @@ export class CardDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
+      this.loading = true;
       const countryName = params.get('country');
 
       console.log(countryName);
@@ -28,7 +37,7 @@ export class CardDetailsComponent implements OnInit {
       if (countryName) {
         this.countriesService.getCountry(countryName).subscribe((country) => {
           this.countryInfo = country as CountryInfo[];
-          console.log(this.countryInfo);
+          this.loading = false;
         });
       }
     });

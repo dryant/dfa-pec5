@@ -8,7 +8,7 @@ describe('CitytableComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CitytableComponent]
+      declarations: [CitytableComponent],
     });
     fixture = TestBed.createComponent(CitytableComponent);
     component = fixture.componentInstance;
