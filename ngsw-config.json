@@ -40,16 +40,6 @@
         "maxAge": "50d",
         "timeout": "10s"
       }
-    },
-    {
-      "name": "api-performance",
-      "urls": ["/api/**"],
-      "cacheConfig": {
-        "strategy": "performance",
-        "maxSize": 100,
-        "maxAge": "3d",
-        "timeout": "10s"
-      }
     }
   ]
 }
